@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using database;
 
 namespace database.Migrations
 {
     [DbContext(typeof(BookshelfContext))]
-    partial class BookshelfContextModelSnapshot : ModelSnapshot
+    [Migration("20220530125157_AddedUniqueConstraintUsername")]
+    partial class AddedUniqueConstraintUsername
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

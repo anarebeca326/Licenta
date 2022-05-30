@@ -53,6 +53,7 @@ namespace database
                 user.Property(u => u.Extraversion).IsRequired();
                 user.Property(u => u.Agreeableness).IsRequired();
                 user.Property(u => u.Neuroticism).IsRequired();
+                user.HasIndex(u => u.Username).IsUnique();
 
             });
 
