@@ -18,8 +18,8 @@ namespace model
         public Gender Gender { get; set; }
         public int Age { get; set; }
 
-        public ICollection<Shelf> BooksOnShelf { get; set; }
-        public ICollection<Favourite> Favourites { get; set; }
+        public virtual ICollection<Shelf> BooksOnShelf { get; set; }
+        public virtual ICollection<Favourite> Favourites { get; set; }
 
 
         public User() { }

@@ -1,12 +1,14 @@
-﻿using model;
+﻿using Microsoft.EntityFrameworkCore;
+using model;
 using model.many_to_many;
 using model.types;
 using model.utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
-namespace persistence.database.seed
+namespace database.seed
 {
     public class Seeder
     {
@@ -31,24 +33,34 @@ namespace persistence.database.seed
             context.SaveChanges();
         }
 
-        public static void PopulateManyToMany(BookshelfContext context)
+        public static void PopulateFavourite(BookshelfContext context)
         {
-            var tuple = ReadRelationsFromCSV();
-            var favourites = tuple.Item1;
-            var shelved = tuple.Item2;
+            var pairs = ReadRelationsFromCSV();
 
-            foreach (Favourite fav in favourites)
+            foreach(Tuple<int, int> pair in pairs)
             {
-                context.Favourite.Add(fav);
-            }
+                var user_fav = context.Users.Include(u => u.Favourites).FirstOrDefault(u => u.ID == pair.Item1);
+                var book_fav = context.Books.Include(u => u.Enjoyers).FirstOrDefault(b => b.ID == pair.Item2);
 
-            foreach (Shelf shelf in shelved)
+                user_fav.Favourites.Add(new Favourite(user_fav, book_fav));
+                context.Update(user_fav);
+                context.SaveChanges();
+            }
+        }
+
+        public static void PopulateShelf(BookshelfContext context)
+        {
+            var pairs = ReadRelationsFromCSV();
+
+            foreach (Tuple<int, int> pair in pairs)
             {
-                context.Shelf.Add(shelf);
+                var user_shelf = context.Users.Include(u => u.BooksOnShelf).FirstOrDefault(u => u.ID == pair.Item1);
+                var book_shelf = context.Books.Include(u => u.Readers).FirstOrDefault(b => b.ID == pair.Item2);
+
+                user_shelf.BooksOnShelf.Add(new Shelf(user_shelf, book_shelf));
+                context.Update(user_shelf);
+                context.SaveChanges();
             }
-
-            context.SaveChanges();
-
         }
 
         private static List<Book> ReadBooksFromCSV()
@@ -133,12 +145,9 @@ namespace persistence.database.seed
             return users;
         }
 
-        private static Tuple<List<Favourite>, List<Shelf>> ReadRelationsFromCSV()
+        private static List<Tuple<int, int>> ReadRelationsFromCSV()
         {
-
-            List<Favourite> favourites = new List<Favourite>();
-            List<Shelf> shelved = new List<Shelf>();
-
+            var pairs = new List<Tuple<int, int>>();
             using (var reader = new StreamReader(@"C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\database\seed\resources\book-user.tsv"))
             {
                 reader.ReadLine();
@@ -150,13 +159,11 @@ namespace persistence.database.seed
                     var userID = int.Parse(values[0]);
                     var bookID = int.Parse(values[1]);
 
-                    favourites.Add(new Favourite(userID, bookID));
-                    shelved.Add(new Shelf(userID, bookID));
+                    var pair = Tuple.Create(userID, bookID);
+                    pairs.Add(pair);
                 }
             }
-
-            return Tuple.Create(favourites, shelved);
+            return pairs;
         }
-
     }
 }

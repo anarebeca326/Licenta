@@ -2,9 +2,9 @@
 using model;
 using model.many_to_many;
 
-namespace persistence.database
+namespace database
 {
-    public class BookshelfContext : DbContext
+    public class BookshelfContext : DbContext, IBookshelfContext
     {
 
         public DbSet<Book> Books { get; set; }
@@ -15,7 +15,6 @@ namespace persistence.database
 
         public BookshelfContext()
         {
-
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,7 +30,13 @@ namespace persistence.database
                 book.Property(b => b.ID).ValueGeneratedOnAdd();
                 book.HasMany(b => b.Readers);
                 book.HasMany(b => b.Enjoyers);
-
+                book.Property(b => b.Title).IsRequired();
+                book.Property(b => b.Author).IsRequired();
+                book.Property(b => b.Description).IsRequired();
+                book.Property(b => b.CommunalCoef).IsRequired();
+                book.Property(b => b.AesthetiCoef).IsRequired();
+                book.Property(b => b.DarkCoef).IsRequired();
+                book.Property(b => b.CerebralCoef).IsRequired();
             });
 
             modelBuilder.Entity<User>(user =>
@@ -40,6 +45,14 @@ namespace persistence.database
                 user.Property(u => u.ID).ValueGeneratedOnAdd();
                 user.HasMany(u => u.BooksOnShelf);
                 user.HasMany(u => u.Favourites);
+                user.Property(u => u.Age).IsRequired();
+                user.Property(u => u.Username).IsRequired();
+                user.Property(u => u.Password).IsRequired();
+                user.Property(u => u.Openness).IsRequired();
+                user.Property(u => u.Conscientiousness).IsRequired();
+                user.Property(u => u.Extraversion).IsRequired();
+                user.Property(u => u.Agreeableness).IsRequired();
+                user.Property(u => u.Neuroticism).IsRequired();
 
             });
 

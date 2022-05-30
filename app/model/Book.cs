@@ -23,14 +23,14 @@ namespace model
         public FeatureClass Cerebral { get; set; }
         public int NoRatings { get; set; }
 
-        public ICollection<Shelf> Readers { get; set; }
-        public ICollection<Favourite> Enjoyers { get; set; }
+        public virtual ICollection<Shelf> Readers { get; set; }
+        public virtual ICollection<Favourite> Enjoyers { get; set; }
 
 
         public Book() { }
         public Book(String title, String author, String description,
             float communal, float aesthetic, float dark, float thrilling, float cerebral)
-        { 
+        {
             Title = title;
             Author = author;
             Description = description;

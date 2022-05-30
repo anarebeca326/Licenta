@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using persistence.database;
+using database;
 
-namespace persistence.Migrations
+namespace database.Migrations
 {
     [DbContext(typeof(BookshelfContext))]
     partial class BookshelfContextModelSnapshot : ModelSnapshot
@@ -32,6 +32,7 @@ namespace persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Author")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Cerebral")
@@ -53,6 +54,7 @@ namespace persistence.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NoRatings")
@@ -65,6 +67,7 @@ namespace persistence.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -101,9 +104,11 @@ namespace persistence.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
