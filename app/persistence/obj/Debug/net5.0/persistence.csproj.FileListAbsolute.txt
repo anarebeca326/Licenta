@@ -1,0 +1,17 @@
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\persistence.deps.json
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\persistence.dll
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\ref\persistence.dll
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\persistence.pdb
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\database.dll
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\model.dll
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\database.pdb
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\bin\Debug\net5.0\model.pdb
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.AssemblyInfo.cs
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.csproj.CopyComplete
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.dll
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\ref\persistence.dll
+C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\persistence\obj\Debug\net5.0\persistence.pdb
