@@ -19,6 +19,7 @@
     <ProjectReference Include="..\database\database.csproj" />
     <ProjectReference Include="..\model\model.csproj" />
     <ProjectReference Include="..\persistence\persistence.csproj" />
+    <ProjectReference Include="..\services\services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2117,6 +2117,21 @@
         "runtime": {
           "bin/placeholder/persistence.dll": {}
         }
+      },
+      "services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "database": "1.0.0",
+          "log4net": "2.0.14",
+          "persistence": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/services.dll": {}
+        }
       }
     }
   },
@@ -7665,6 +7680,11 @@
       "type": "project",
       "path": "../persistence/persistence.csproj",
       "msbuildProject": "../persistence/persistence.csproj"
+    },
+    "services/1.0.0": {
+      "type": "project",
+      "path": "../services/services.csproj",
+      "msbuildProject": "../services/services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7677,7 +7697,8 @@
       "coverlet.collector >= 3.0.2",
       "database >= 1.0.0",
       "model >= 1.0.0",
-      "persistence >= 1.0.0"
+      "persistence >= 1.0.0",
+      "services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7715,6 +7736,9 @@
             },
             "C:\\Users\\MSI\\Desktop\\de_toate\\Facultate\\Sem2\\ELL\\TheActualApp\\persistence\\persistence.csproj": {
               "projectPath": "C:\\Users\\MSI\\Desktop\\de_toate\\Facultate\\Sem2\\ELL\\TheActualApp\\persistence\\persistence.csproj"
+            },
+            "C:\\Users\\MSI\\Desktop\\de_toate\\Facultate\\Sem2\\ELL\\TheActualApp\\services\\services.csproj": {
+              "projectPath": "C:\\Users\\MSI\\Desktop\\de_toate\\Facultate\\Sem2\\ELL\\TheActualApp\\services\\services.csproj"
             }
           }
         }

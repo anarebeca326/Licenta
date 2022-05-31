@@ -16,7 +16,8 @@
           "coverlet.collector": "3.0.2",
           "database": "1.0.0",
           "model": "1.0.0",
-          "persistence": "1.0.0"
+          "persistence": "1.0.0",
+          "services": "1.0.0"
         },
         "runtime": {
           "test.dll": {}
@@ -1531,6 +1532,16 @@
         "runtime": {
           "persistence.dll": {}
         }
+      },
+      "services/1.0.0": {
+        "dependencies": {
+          "database": "1.0.0",
+          "log4net": "2.0.14",
+          "persistence": "1.0.0"
+        },
+        "runtime": {
+          "services.dll": {}
+        }
       }
     }
   },
@@ -2377,6 +2388,11 @@
       "sha512": ""
     },
     "persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
