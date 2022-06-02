@@ -47,6 +47,9 @@ namespace database.Migrations
                     b.Property<float>("CommunalCoef")
                         .HasColumnType("real");
 
+                    b.Property<string>("CoverImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Dark")
                         .HasColumnType("int");
 
@@ -134,6 +137,21 @@ namespace database.Migrations
                     b.ToTable("Favourite");
                 });
 
+            modelBuilder.Entity("model.many_to_many.Rated", b =>
+                {
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserID", "BookID");
+
+                    b.HasIndex("BookID");
+
+                    b.ToTable("Rated");
+                });
+
             modelBuilder.Entity("model.many_to_many.Shelf", b =>
                 {
                     b.Property<int>("UserID")
@@ -168,6 +186,25 @@ namespace database.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("model.many_to_many.Rated", b =>
+                {
+                    b.HasOne("model.Book", "Book")
+                        .WithMany("RatedBy")
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("model.User", "User")
+                        .WithMany("RatedBooks")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("model.many_to_many.Shelf", b =>
                 {
                     b.HasOne("model.Book", "Book")
@@ -191,6 +228,8 @@ namespace database.Migrations
                 {
                     b.Navigation("Enjoyers");
 
+                    b.Navigation("RatedBy");
+
                     b.Navigation("Readers");
                 });
 
@@ -199,6 +238,8 @@ namespace database.Migrations
                     b.Navigation("BooksOnShelf");
 
                     b.Navigation("Favourites");
+
+                    b.Navigation("RatedBooks");
                 });
 #pragma warning restore 612, 618
         }

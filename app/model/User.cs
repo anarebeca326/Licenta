@@ -20,6 +20,7 @@ namespace model
 
         public virtual ICollection<Shelf> BooksOnShelf { get; set; }
         public virtual ICollection<Favourite> Favourites { get; set; }
+        public virtual ICollection<Rated> RatedBooks { get; set; }
 
 
         public User() { }

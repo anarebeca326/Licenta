@@ -6,6 +6,7 @@ using Moq;
 using NUnit.Framework;
 using persistence;
 using services;
+using services.utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,9 +63,10 @@ namespace test
 
         private List<User> GetUserSourceList()
         {
-            var user1 = new User("Username1", "Password", model.types.Gender.ANOTHER, 30, 50, 50, 50, 50, 50);
+            var password = Transcoder.EncodePass("Password");
+            var user1 = new User("Username1", password, model.types.Gender.ANOTHER, 30, 50, 50, 50, 50, 50);
             user1.ID = 1;
-            var user2 = new User("Username2", "Password", model.types.Gender.ANOTHER, 30, 50, 50, 50, 50, 50);
+            var user2 = new User("Username2", password, model.types.Gender.ANOTHER, 30, 50, 50, 50, 50, 50);
             user2.ID = 2;
 
             var book1 = new Book("Title", "Author", "Description", 5, 5, 5, 5, 5);
@@ -97,7 +99,6 @@ namespace test
             var service = new BookshelfService(bookRepo, userRepo);
 
             // Verification
-
             Assert.AreEqual(service.Login("Username1", "Password"), 1);
 
         }
@@ -371,14 +372,14 @@ namespace test
             var service = new BookshelfService(bookRepo, userRepo);
 
             // Verification
-            Assert.Throws<Exception>(() => service.UpdateUserPersonality(1, new List<int>()));
+            Assert.Throws<Exception>(() => service.UpdateUserPersonality(1, new List<Response>()));
         }
 
-        private List<int> getValidResponses()
+        private List<Response> getValidResponses()
         {
-            var responses = new List<int>();
+            var responses = new List<Response>();
             for (int idx = 0; idx < 60; idx++)
-                responses.Add(1);
+                responses.Add(new Response(1, PersonalityFactor.OPENNESS, 1));
             return responses;
         }
 

@@ -1,9 +1,6 @@
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\appsettings.json
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\Bookshelf.exe
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\Bookshelf.deps.json
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\Bookshelf.runtimeconfig.json
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\Bookshelf.runtimeconfig.dev.json
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\Bookshelf.dll
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\ref\Bookshelf.dll
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\bin\Debug\net5.0\Bookshelf.pdb
@@ -14,7 +11,6 @@ C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debu
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.AssemblyInfoInputs.cache
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.AssemblyInfo.cs
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.csproj.CoreCompileInputs.cache
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.RazorAssemblyInfo.cache
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.RazorAssemblyInfo.cs
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\staticwebassets\Bookshelf.StaticWebAssets.Manifest.cache
@@ -36,5 +32,4 @@ C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debu
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.dll
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\ref\Bookshelf.dll
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.pdb
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.genruntimeconfig.cache
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\Bookshelf\obj\Debug\net5.0\Bookshelf.csproj.CopyComplete

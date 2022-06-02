@@ -155,9 +155,5 @@ C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\obj\Debug\net
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\obj\Debug\net5.0\ref\test.dll
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\obj\Debug\net5.0\test.pdb
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\obj\Debug\net5.0\test.genruntimeconfig.cache
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\bin\Debug\net5.0\services.deps.json
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\bin\Debug\net5.0\services.runtimeconfig.json
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\bin\Debug\net5.0\services.runtimeconfig.dev.json
-C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\bin\Debug\net5.0\services.exe
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\bin\Debug\net5.0\services.dll
 C:\Users\MSI\Desktop\de_toate\Facultate\Sem2\ELL\TheActualApp\test\bin\Debug\net5.0\services.pdb

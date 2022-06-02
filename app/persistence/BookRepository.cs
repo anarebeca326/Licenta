@@ -1,4 +1,5 @@
 ﻿using database;
+using Microsoft.EntityFrameworkCore;
 using model;
 using System;
 using System.Collections.Generic;
@@ -81,7 +82,7 @@ namespace persistence
             _logger.Info($"Searching book by id {id} ...");
             try
             {
-                var result = _context.Books.FirstOrDefault(e => e.ID == id);
+                var result = _context.Books.Include(b => b.Enjoyers).Include(b => b.Readers).FirstOrDefault(e => e.ID == id);
                 if (result != null)
                 {
                     _logger.Info($"Returning book {result}.");
@@ -104,7 +105,7 @@ namespace persistence
             _logger.Info("Retrieving all books ...");
             try
             {
-                var result = _context.Books.ToList();
+                var result = _context.Books.Include(b => b.Enjoyers).Include(b => b.Readers).ToList();
                 _logger.Info($"Returning list of all books {result}.");
                 _logger.Info("Exitting method.");
                 return result;

@@ -19,7 +19,8 @@ namespace database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=bookshelf-sv.database.windows.net;Initial Catalog=bookshelf_db;User Id=adminlogin;Password=kartoffelpuree27AZURE;");
+            //optionsBuilder.UseSqlServer("Data Source=bookshelf-sv.database.windows.net;Initial Catalog=bookshelf_db;User Id=adminlogin;Password=kartoffelpuree27AZURE;");
+            optionsBuilder.UseSqlServer("Data Source=bookshelf-sv.database.windows.net;Initial Catalog=biggerbookshelf_db;User Id=adminlogin;Password=kartoffelpuree27AZURE;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -81,6 +82,19 @@ namespace database
                 favourite.HasOne<Book>(f => f.Book)
                 .WithMany(b => b.Enjoyers)
                 .HasForeignKey(f => f.BookID);
+            });
+
+            modelBuilder.Entity<Rated>(rated =>
+            {
+                rated.HasKey(r => new { r.UserID, r.BookID });
+
+                rated.HasOne<User>(r => r.User)
+                .WithMany(u => u.RatedBooks)
+                .HasForeignKey(r => r.UserID);
+
+                rated.HasOne<Book>(r => r.Book)
+                .WithMany(b => b.RatedBy)
+                .HasForeignKey(r => r.BookID);
             });
         }
 

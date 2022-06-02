@@ -2,7 +2,7 @@
 
 namespace persistence
 {
-    interface IRepository<T, ID>
+    public interface IRepository<T, ID>
     {
         List<T> GetAll();
         T Get(ID id);

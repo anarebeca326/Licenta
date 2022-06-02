@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "cc/fn1z7fF6QcvNnzdd9v6344WczwwEe5VIh3N3PFzKoNbAbLdWOrsLo0iszxqzU4lpzlNiVb3BJuC6GoQ/kmQ==",
+  "dgSpecHash": "wFXsW+tBR13uabfjDGLMxlwSdB7B6909Vj/wIwvvnRElQ5RoNVXqAxrVJ6L25zMDs75ps1zN5y9xlej0O4asug==",
   "success": true,
   "projectFilePath": "C:\\Users\\MSI\\Desktop\\de_toate\\Facultate\\Sem2\\ELL\\TheActualApp\\test\\test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MSI\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\log4net\\2.0.14\\log4net.2.0.14.nupkg.sha512",
-    "C:\\Users\\MSI\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
+    "C:\\Users\\MSI\\.nuget\\packages\\microsoft.codecoverage\\17.2.0\\microsoft.codecoverage.17.2.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

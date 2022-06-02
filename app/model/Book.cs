@@ -22,9 +22,11 @@ namespace model
         public FeatureClass Thrilling { get; set; }
         public FeatureClass Cerebral { get; set; }
         public int NoRatings { get; set; }
+        public String CoverImage { get; set; }
 
         public virtual ICollection<Shelf> Readers { get; set; }
         public virtual ICollection<Favourite> Enjoyers { get; set; }
+        public virtual ICollection<Rated> RatedBy { get; set; }
 
 
         public Book() { }
@@ -39,6 +41,23 @@ namespace model
             DarkCoef = dark;
             ThrillingCoef = thrilling;
             CerebralCoef = cerebral;
+            NoRatings = 1;
+
+            ComputeFeatureClasses();
+        }
+
+        public Book(String title, String author, String description,
+            float communal, float aesthetic, float dark, float thrilling, float cerebral, String cover_path)
+        {
+            Title = title;
+            Author = author;
+            Description = description;
+            CommunalCoef = communal;
+            AesthetiCoef = aesthetic;
+            DarkCoef = dark;
+            ThrillingCoef = thrilling;
+            CerebralCoef = cerebral;
+            CoverImage = cover_path;
             NoRatings = 1;
 
             ComputeFeatureClasses();

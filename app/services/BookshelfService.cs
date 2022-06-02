@@ -1,14 +1,12 @@
 ﻿using model;
 using model.many_to_many;
 using model.types;
-using model.utils;
 using persistence;
 using services.dto;
+using services.utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace services
 {
@@ -32,6 +30,7 @@ namespace services
 
             try
             {
+                password = Transcoder.EncodePass(password);
                 var user = _userRepo.GetAll().FirstOrDefault(u => u.Username == username && u.Password == password);
                 if(user == null)
                 {
@@ -207,6 +206,7 @@ namespace services
                 }
 
                 // Input is valid, creating account:
+                password = Transcoder.EncodePass(password);
                 var user = new User(username, password, gender, 30, -1, -1, -1, -1, -1);
                 var created = _userRepo.Create(user);
 
@@ -253,7 +253,7 @@ namespace services
             return false;
         }
 
-        public void UpdateUserPersonality(int userID, List<int> responses)
+        public void UpdateUserPersonality(int userID, List<Response> responses)
             /// Updates user's personality coefficients using the new responses
         {
             _logger.Info($"Updating personality coefficients for user with id {userID} considering responses {responses} ...");
